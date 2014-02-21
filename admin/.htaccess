@@ -1,0 +1,7 @@
+# Prevent visitor from viewing your MD and TXT files
+# Do not delete this file!
+<FilesMatch "(^#.*#|\.(md|txt)|~)$">
+	Order allow,deny
+	Deny from all
+	Satisfy All
+</FilesMatch>
