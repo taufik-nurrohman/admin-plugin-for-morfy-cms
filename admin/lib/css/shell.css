@@ -1,0 +1,112 @@
+/* Skin for Login & Logout Page */
+* {
+  margin:0;
+  padding:0;
+  -webkit-box-sizing:border-box;
+  -moz-box-sizing:border-box;
+  box-sizing:border-box;
+}
+::-webkit-input-placeholder {color:#ccc}
+:-ms-input-placeholder {color:#ccc}
+::-moz-placeholder {color:#ccc}
+:-moz-placeholder {color:#ccc}
+:placeholder {color:#ccc}
+:focus {outline:none}
+:focus::-webkit-input-placeholder {color:#ddd}
+:focus:-ms-input-placeholder {color:#ddd}
+:focus::-moz-placeholder {color:#ddd}
+:focus:-moz-placeholder {color:#ddd}
+:focus:placeholder {color:#ddd}
+body {
+  background-color:#f5f5f5;
+  font:normal normal 13px/1.4 Helmet,Freesans,Sans-Serif;
+  color:#333;
+}
+a {
+  color:#005c8b;
+  text-decoration:none;
+}
+a:focus,
+a:hover {
+  color:#054664;
+  text-decoration:underline;
+}
+label {display:none}
+button,
+input,
+select,
+textarea {
+  width:250px;
+  font:inherit;
+  color:inherit;
+  display:inline-block;
+  *display:inline;
+  margin:0;
+  padding:9px 10px;
+  background-color:white;
+  border:1px solid #ddd;
+  -webkit-border-radius:3px;
+  -moz-border-radius:3px;
+  border-radius:3px;
+}
+textarea {line-height:normal}
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  margin:0;
+  padding:0;
+  border:none;
+  outline:none;
+}
+button {
+  width:auto;
+  padding-right:15px;
+  padding-left:15px;
+  background-color:#369836;
+  border-color:#348334;
+  color:white;
+  font-weight:bold;
+  cursor:pointer;
+}
+button:focus,
+button:hover {
+  background-color:#318131;
+  border-color:#296729;
+}
+.page-wrapper {
+  position:absolute;
+  top:50%;
+  left:50%;
+  margin-top:-125px;
+  margin-left:-125px;
+  width:250px;
+  height:250px;
+}
+.page-wrapper div {margin:20px 0 0}
+.page-wrapper input {
+  display:block;
+  width:100%;
+}
+.message {
+  line-height:1;
+  padding:1em 1.2em;
+  border:1px solid;
+  -webkit-border-radius:3px;
+  -moz-border-radius:3px;
+  border-radius:3px;
+}
+.message-error {
+  background-color:#f5e0e3;
+  border-color:#ebd7da;
+  color:#a7898b;
+}
+.message-success {
+  background-color:#e3f5e5;
+  border-color:#daebdc;
+  color:#95A798;
+}
+
+/* Login */
+.page-login .page-wrapper {}
+
+/* Logout */
+.page-logout .page-wrapper {}
