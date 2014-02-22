@@ -12,7 +12,7 @@
  */
 
 Morfy::factory()->addAction('before_render', function() {
-    header($_SERVER['SERVER_PROTOCOL'].' 200 OK');
+    header($_SERVER['SERVER_PROTOCOL'] . ' 200 OK');
 
     // Configuration data
     $config = Morfy::$config['admin_config'];
@@ -54,7 +54,7 @@ Morfy::factory()->addAction('before_render', function() {
     }
 
     // Creating login page...
-    if(rtrim(Morfy::factory()->getUrl(), '/') == 'admin/login') {
+    if(trim(Morfy::factory()->getUrl(), '/') == 'admin/login') {
         $html  = "<!DOCTYPE html>\n";
         $html .= "<html dir=\"ltr\" class=\"" . $config['classes']['page_login'] . "\">\n";
         $html .= "  <head>\n";
@@ -83,7 +83,7 @@ Morfy::factory()->addAction('before_render', function() {
     }
 
     // Creating logout page...
-    if(rtrim(Morfy::factory()->getUrl(), '/') == 'admin/logout') {
+    if(trim(Morfy::factory()->getUrl(), '/') == 'admin/logout') {
 
         // Destroy the session...
         session_unset();
