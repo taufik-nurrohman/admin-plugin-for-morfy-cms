@@ -7,7 +7,7 @@
  * @subpackage Plugins
  * @author Taufik Nurrohman <http://latitudu.com>
  * @copyright 2014 Romanenko Sergey / Awilum
- * @version 1.0.1
+ * @version 1.0.2
  *
  */
 
@@ -85,9 +85,15 @@ Morfy::factory()->addAction('before_render', function() {
     // Creating logout page...
     if(trim(Morfy::factory()->getUrl(), '/') == 'admin/logout') {
 
-        // Destroy the session...
-        session_unset();
-        session_destroy();
+        // Destroy the login session...
+        if(isset($_SESSION['security_token'])) {
+            unset($_SESSION['security_token']);
+        }
+
+        // Redirect to login page if login session is not set.
+        if( ! isset(Morfy::$config['logged_in']) || Morfy::$config['logged_in'] === false) {
+            header('Location: login');
+        }
 
         $html  = "<!DOCTYPE html>\n";
         $html .= "  <html dir=\"ltr\" class=\"" . $config['classes']['page_logout'] . "\">\n";
